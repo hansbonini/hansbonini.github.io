@@ -7,6 +7,7 @@ category: 'arch'
 twitter_text: Otimizando o desempenho do Arch Linux.
 introduction: Minha instalação do Arch está lenta, e agora? Bem vamos falar de recursos que podem ser empregados para melhorar o desempenho do seu sistema. Lembrando que uma boa configuração é fruto de tentativas e benchmarks exaustivos que você deve aplicar na sua instalação. Este artigo vai servir como uma luz no fim do túnel pra você
 ---
+
 não se perder por ai, mas não se empolgue que o conteúdo dele pode ser encontrado nas **wikipédias** por ai, apenas compilei aqui para facilitar o entendimento. E é claro que vale lembra que existe muito mais coisas que você pode fazer... enfim, deixemos de blábláblá.
 
 ## ZRAM

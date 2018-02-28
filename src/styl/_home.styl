@@ -9,7 +9,7 @@ main
 .row
     center(100%)
     margin 0px 10px
-    
+
 .flex-grid
     display flex
     flex-flow row wrap
@@ -40,7 +40,7 @@ main
             transform scale(1.05)
         .box-body
             time, p
-                color accentDark
+                color warning
             .new-post:after
                 background-color #000
             .cover
@@ -50,17 +50,18 @@ main
         text-decoration none
         display block
     .category
+        secondaryFont(700)
         display block
         height rem(36px)
         line-height rem(36px)
-        text-transform uppercase
+        text-transform lowercase
         font-weight bold
-        font-size rem(18px)
+        font-size rem(24px)
         padding 0 rem(15px)
         a
-            color accentDark
+            color primary
     .box-body
-        img 
+        img
             width 100%
             height auto
             margin 0 auto
@@ -68,40 +69,41 @@ main
         time
             font-weight 300
             font-size rem(16px)
-            color darken(lightGray, 50%)
+            color darken(success, 50%)
             pointer-events none
         h2
             margin rem(10px) 0
             font-size rem(24px)
             mainFont(800)
-            color accentDark
+            color warning
             line-height rem(30px)
             span
-                color 
+                color
         p
             margin 0 0 rem(30px)
-            color darken(lightGray, 20%)
+            color darken(default, 20%)
             font-size rem(17px)
             line-height rem(26px)
         .tags a
-            height rem(30px)
-            line-height rem(26px)
-            color accentDark
+            height rem(20px)
+            line-height rem(18px)
+            color danger
             padding 0 rem(10px)
-            border 1px solid accentDark
-            border-radius 15px
+            border 1px solid danger
+            border-radius 0px
             display inline-block
             margin 0 rem(10px) rem(10px) 0
+            font-size: rem(10px)
             z-index 50
             &:hover
-                color primaryDark
-                background accentDark
-                border-color accentDark
+                color default
+                background primary
+                border-color primary
         .new-post:after
             content 'New post'
             text-transform uppercase
             display inline-block
-            background themeColor
+            background bg_color
             color #fff
             font-size rem(13px)
             font-weight 700
@@ -128,7 +130,7 @@ main
                 left 50%
                 margin-top rem(-40px)
                 margin-left rem(-40px)
-                border 2px solid #fff
+                border 2px solid primary
                 z-index 1000
             .preload
                 background url(../../assets/img/icons/preloader.svg) center center no-repeat

@@ -3,12 +3,12 @@ title: Hans Bonini
 email: hans@ysolutions.com.br
 description: Prazer, Hans Bonini. Dev (Programador) e SysAdmin. Entusiasta de Tecnologia com grande Know-How na àrea e especialização em Serverless AWS, NodeJS e GraphQL. Experiência durante muito tempo com Magento e trabalhos necessários com Wordpress. Nas horas vagas Guitarrista, Fã de Cervejas Artesanais, Cozinheiro, Pintor, Pedreiro e Prícipe da Disney. ;)
 baseurl: ""
-url: "https://hansbonini.com.br" 
+url: "https://hansbonini.com.br"
 google_analytics: "UA-XXXXXXXX-X"
 
 # User Settings
 username: hansbonini
-user_description: Dev (Programador) e SysAdmin.
+user_description: Dev (Programador) e SysAdmin. Entusiasta de Tecnologia com grande Know-How na àrea e especialização em Serverless AWS, NodeJS e GraphQL. Experiência durante muito tempo com Magento e trabalhos necessários com Wordpress. Nas horas vagas Guitarrista, Fã de Cervejas Artesanais, Cozinheiro, Pintor, Pedreiro e Prícipe da Disney. ;)
 disqus_username: hansbonini
 
 # Social Media
@@ -24,7 +24,7 @@ highlighter: rouge
 permalink: /:title/
 
 # Plugins
-gems:
+plugins:
   - jemoji
 
 # Links to include in menu navigation
@@ -32,10 +32,10 @@ gems:
 links:
   - title: Blog
     url: /
-  - title: Quem é o Hans
-    url: /quem-e-o-hans/
-  - title: Contato
-    url: /contato/
+#  - title: Quem é o Hans
+#    url: /quem-e-o-hans/
+#  - title: Contato
+#    url: /contato/
 
 # Exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules']

@@ -1,5 +1,5 @@
 .author
-    background lightGray
+    background lighten(bg_color,10%)
     display table
     width 100%
     padding rem(40px) 0
@@ -13,17 +13,18 @@
         +below(cut)
             text-align center
     svg
+        float right
         size(25,25)
         margin-right rem(10px)
     a
-        fill darken(lightGray, 30%)
+        fill warning
         text-decoration none
         border none
         transition all .3s
         &:hover
-            fill themeColor
+            fill darken(warning, 30%)
     img
-        width rem(180px)
+        width rem(80px)
         border-radius 50%
         display block
         margin auto
@@ -31,27 +32,28 @@
             float left
             margin-right 3.125rem
     .def
-        color gray
-        font-size rem(18px)
-        mainFont(300)
+        color primary
+        font-size rem(24px)
+        secondaryFont(300)
         margin rem(10px)
         +above(cut)
             margin 0
     .name
         margin 0
         a
-            mainFont()
+            secondaryFont()
             text-decoration none
-            color black
+            color warning
             font-size rem(30px)
             &:hover
-                color texts
+                color darken(warning, 30%)
             +above(cut)
-                font-size rem(45px)
+                font-size rem(30px)
     .desc
         mainFont(300)
+        color default
         margin rem(10px)
         font-size rem(16px)
         line-height rem(25px)
         +above(cut)
-            font-size rem(18px)
+            font-size rem(16px)

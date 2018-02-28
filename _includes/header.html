@@ -7,8 +7,15 @@
     </a>
     <h1 class="logo">
         <a href="{{ site.baseurl }}/">
-            {{ site.username }}
+          hansbonini@site $
         </a>
+        {% if page.title %}
+        <span class="title">
+          {{ page.title }}
+        </a>
+        {% else %}
+        <span>_</span>
+        {% endif %}
     </h1>
 </header>
 

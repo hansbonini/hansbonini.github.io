@@ -9,18 +9,18 @@ size(width = 30, height = 30)
         padding rem(15px)
         margin rem(2px)
         border-radius 50%
-        border rem(2px) solid accentDark
+        border rem(2px) solid warning
         line-height 0
         transition all .7s
         .icon
-            fill accentDark
+            fill warning
             size(18,18)
             +above(cut)
                 size()
         &:hover
-            background accentDark
+            background warning
             .icon
-                fill texts
+                fill default
 
 .down
     position absolute
@@ -31,5 +31,5 @@ size(width = 30, height = 30)
     .icon
         align(both)
         size(100,100)
-        fill accentDark
+        fill warning
         animation pulse 1.3s infinite

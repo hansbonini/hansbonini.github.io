@@ -1,0 +1,43 @@
+# Site Settings
+title: Hans Bonini
+email: hans@ysolutions.com.br
+description: Prazer, Hans Bonini. Dev (Programador) e SysAdmin. Entusiasta de Tecnologia com grande Know-How na àrea e especialização em 
+Serverless AWS, NodeJS e GraphQL. Experiência durante muito tempo com Magento e trabalhos necessários com Wordpress. Nas horas vagas 
+Guitarrista, Fã de Cervejas Artesanais, Cozinheiro, Pintor, Pedreiro e Prícipe da Disney. ;)
+baseurl: "/"
+url: "https://www.hansbonini.com.br" 
+google_analytics: "UA-XXXXXXXX-X"
+
+# User Settings
+username: hansbonini
+user_description: Dev (programador) e SysAdmin.
+disqus_username: hansbonini
+
+# Social Media
+github_username: hansbonini
+facebook_username: hansbonini
+twitter_username: hansbonini
+instagram_username: eusouohans
+linkedin_username: hansbonini
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+
+# Plugins
+gems:
+  - jemoji
+
+# Links to include in menu navigation
+# For external links add external: true
+links:
+  - title: Blog
+    url: /
+  - title: Quem é o Hans
+    url: /quem-e-o-hans/
+  - title: Contato
+    url: /contato/
+
+# Exclude my node related stuff
+exclude: ['package.json', 'src', 'node_modules']

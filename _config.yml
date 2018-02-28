@@ -1,0 +1,58 @@
+title:            Hans Bonini
+tagline:          Nonsense dev life ;X!
+description:      Meu site e blog pessoal retratando minha vida como dev (programador) e sysadmin.
+url:              https://hansbonini.com.br
+
+# Owner/author information
+owner:
+  name:           Hans Bonini
+  avatar:         bio-photo.jpg
+  bio:		  "Hans Bonini, prazer. Dev (Programador) e SysAdmin. Especializado em Serverless AWS, Node.js e GraphQL. Conhecimentos em 
+várias àreas tecnológicas e durante muito tempo experiências com Magento e Wordpress. Nas horas vagas: Guitarrista, Cozinheiro, Pintor, 
+Pedreiro. ;)" 
+  email:          hans@ysolutions.com.br
+  twitter:        hansbonini
+  facebook:       hansbonini
+  github:         hansbonini
+  linkedin:       hansbonini
+  instagram:      eusouohans
+
+# Analytics and webmaster tools stuff goes here
+#google_analytics:   UA-39365944-4
+#google_verify:      
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+#bing_verify:        
+
+# Links to include in top navigation
+# For external links add external: true
+links:
+  - title: Inicio
+    url: /
+  - title: Quem é o Hans?
+    url: /quem-e-o-hans/
+  - title: Artigos
+    url: /artigos/
+
+timezone:    America/Sao_Paulo
+future:      true
+pygments:    true
+markdown:    kramdown
+
+permalink:   /:categories/:title
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
+
+  coderay:
+    coderay_line_numbers: 
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: class
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]

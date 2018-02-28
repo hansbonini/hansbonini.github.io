@@ -29,9 +29,9 @@ links:
   - title: Inicio
     url: /
   - title: Quem é o Hans?
-    url: /quem-e-o-hans/
+    url: /quem-e-o-hans
   - title: Artigos
-    url: /artigos/
+    url: /artigos
 
 timezone:    America/Sao_Paulo
 future:      true

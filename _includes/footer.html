@@ -39,7 +39,9 @@
         </a>
         {% endif %}
       </li>
+      {% if page.title %}
       <li>{{page.title}}</li>
+      {% endif %}
       <li><i class="devicons devicons-jekyll_small"></i> Powered by Jekyll</li>
     </ul>
   </div>

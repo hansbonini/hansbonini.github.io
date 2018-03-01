@@ -7,69 +7,78 @@
         font-size rem(30px)
 
 footer
-    center(rem(800px))
-    border-top 1px solid darken(primary, 10%)
+    secondaryFont(100)
+    position fixed
+    height rem(30px)
+    width 100%
+    bottom 0
     background darken(bg_color,30%)
-    padding rem(20px) rem(25px)
-    margin-top rem(50px)
-    mainFont(300)
-    +above(cut)
-        margin-top rem(100px)
-    p
-        width 100%
-        display inline-block
-        text-align center
-        text-decoration none
-        color primary
-        font-size rem(16px)
-        line-height rem(25px)
-    span
-        font-weight 700
-    svg
-        size(28,28)
-        display inline-block
-        vertical-align middle
-        margin-right rem(10px)
-        +above(cut)
-            margin-right rem(20px)
-        &.love
-            size(20,20)
-            fill bg_color
-            margin-top rem(-2px)
-            margin-left rem(3px)
-            margin-right rem(3px)
-    a
-        fill #808080
-        transition all .3s ease
-        text-decoration none
-        color #808080
-        &:hover
-            fill bg_color
-        &.creator:hover
-            text-decoration underline
-    ul
-        display: inline-block
-        width 100%
-        text-align center
-        padding 0
+    z-index 20
+    .devicons
+      font-size: rem(12px)
+      margin: 0
+      padding: 0
+    li
+        margin 0
         list-style-type none
-        li
-            float left
-            margin-bottom rem(10px)
-        li:before
-            content '|'
-            padding 0 20px
-        li:first-child:before
-            content ''
-        a
-            text-decoration none
-            font-size rem(15px)
-            &:hover
-                text-decoration underline
-
+    ul
+        margin 0
+        padding 0
+    .footer_bar
+        background-color bg_color
+        padding 0
+        margin 0
+        cf()
+        svg
+            size(15,15)
+            vertical-align middle
+            margin-right rem(10px)
+            +above(cut)
+                margin-right rem(20px)
+            &.love
+                size(15,15)
+                fill bg_color
+                margin-left rem(3px)
+                margin-right rem(3px)
+        ul
+            col(1.3/2)
+            +below(1000px)
+                col(2/2)
+            li
+                transform skewx(-20deg)
+                height 30px
+                margin 0 0 0 rem(-2px)
+                padding rem(3px) rem(4px) rem(6px) rem(4px)
+                background warning
+                display inline-block
+                &:first-child
+                    background primary
+                    padding rem(5px) rem(10px) rem(5px) rem(20px)
+                    margin-left rem(-10px)
+                    color bg_color
+                    a
+                      color bg_color
+                      text-decoration none
+                &:nth-child(2)
+                  padding rem(5px) rem(20px)
+                  a
+                    text-decoration none
+                &:nth-child(3)
+                    background success
+                    padding rem(5px) rem(20px)
+                &:last-child
+                    float right
+                    background primary
+                    margin-right: rem(-10px)
+                    padding rem(5px) rem(30px)
+                    span
+                        color default
+                &:nth-child(3),
+                &:nth-child(4)
+                    +below(cut)
+                        display none
 .main-page
     footer
         background darken(bg_color, 30%)
-        border-top 1px solid darken(primary, 10%)
         p
             color primary

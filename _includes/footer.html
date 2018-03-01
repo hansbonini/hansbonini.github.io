@@ -1,43 +1,48 @@
 <footer>
-    <p>
-      {% if site.github_username %}
-      <a itemprop="github" href="https://github.com/{{ site.github_username }}" title="Github">
-        <svg><use xlink:href="#icon-github"></use></svg>
-      </a>
-      {% endif %}
-      {% if site.facebook_username %}
-      <a itemprop="facebook" href="https://www.facebook.com/{{ site.facebook_username }}" title="Facebook">
-        <svg><use xlink:href="#icon-facebook"></use></svg>
-      </a>
-      {% endif %}
-      {% if site.twitter_username %}
-      <a itemprop="twitter" href="https://twitter.com/{{ site.twitter_username }}" title="Twitter">
-        <svg><use xlink:href="#icon-twitter"></use></svg>
-      </a>
-      {% endif %}
-      {% if site.medium_username %}
-      <a itemprop="medium" href="https://medium.com/@{{ site.medium_username }}" title="Twitter">
-        <svg><use xlink:href="#icon-medium"></use></svg>
-      </a>
-      {% endif %}
-      {% if site.instagram_username %}
-      <a itemprop="instagram" href="https://www.instagram.com/{{ site.instagram_username }}" title="Instagram">
-        <svg><use xlink:href="#icon-instagram"></use></svg>
-      </a>
-      {% endif %}
-      {% if site.linkedin_username %}
-      <a itemprop="linkedin" href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="LinkedIn">
-        <svg><use xlink:href="#icon-linkedin"></use></svg>
-      </a>
-      {% endif %}
-    </p>
+  <div class="footer_bar">
     <ul>
-        {% for link in site.links %}
-          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-        {% endfor %}
-        <li><a class="feed" href="/feed.xml" title="Atom/RSS feed">Feed</a></li>
+      <li>
+          {% for link in site.links %}
+            <a href="{{ link.url }}">{{ link.title }}</a>
+          {% endfor %}
+          | <a class="feed" href="/feed.xml" title="Atom/RSS feed">Feed</a>
+      </li>
+      <li>
+        {% if site.github_username %}
+        <a itemprop="github" href="https://github.com/{{ site.github_username }}" title="Github">
+          <svg><use xlink:href="#icon-github"></use></svg>
+        </a>
+        {% endif %}
+        {% if site.facebook_username %}
+        <a itemprop="facebook" href="https://www.facebook.com/{{ site.facebook_username }}" title="Facebook">
+          <svg><use xlink:href="#icon-facebook"></use></svg>
+        </a>
+        {% endif %}
+        {% if site.twitter_username %}
+        <a itemprop="twitter" href="https://twitter.com/{{ site.twitter_username }}" title="Twitter">
+          <svg><use xlink:href="#icon-twitter"></use></svg>
+        </a>
+        {% endif %}
+        {% if site.medium_username %}
+        <a itemprop="medium" href="https://medium.com/@{{ site.medium_username }}" title="Twitter">
+          <svg><use xlink:href="#icon-medium"></use></svg>
+        </a>
+        {% endif %}
+        {% if site.instagram_username %}
+        <a itemprop="instagram" href="https://www.instagram.com/{{ site.instagram_username }}" title="Instagram">
+          <svg><use xlink:href="#icon-instagram"></use></svg>
+        </a>
+        {% endif %}
+        {% if site.linkedin_username %}
+        <a itemprop="linkedin" href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="LinkedIn">
+          <svg><use xlink:href="#icon-linkedin"></use></svg>
+        </a>
+        {% endif %}
+      </li>
+      <li>{{page.title}}</li>
+      <li><i class="devicons devicons-jekyll_small"></i> Powered by Jekyll</li>
     </ul>
-    <p><i class="devicons devicons-jekyll_small"></i> Powered by Jekyll</p>
+  </div>
 </footer>
 <script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
 {% include stats.html %}

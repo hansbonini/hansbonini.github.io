@@ -12,11 +12,13 @@ footer
     background darken(bg_color,30%)
     padding rem(20px) rem(25px)
     margin-top rem(50px)
-    margin-bottom rem(40px)
     mainFont(300)
     +above(cut)
         margin-top rem(100px)
     p
+        width 100%
+        display inline-block
+        text-align center
         text-decoration none
         color primary
         font-size rem(16px)
@@ -46,10 +48,19 @@ footer
         &.creator:hover
             text-decoration underline
     ul
+        display: inline-block
+        width 100%
+        text-align center
         padding 0
         list-style-type none
         li
+            float left
             margin-bottom rem(10px)
+        li:before
+            content '|'
+            padding 0 20px
+        li:first-child:before
+            content ''
         a
             text-decoration none
             font-size rem(15px)
@@ -58,7 +69,7 @@ footer
 
 .main-page
     footer
-        background success
-        border-top 1px solid lighten(success, 10%)
+        background darken(bg_color, 30%)
+        border-top 1px solid darken(primary, 10%)
         p
-            color warning
+            color primary

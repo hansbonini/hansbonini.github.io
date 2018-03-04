@@ -15,7 +15,7 @@ Usando um esquema desse tipo, você precisa puxar todos os dados da **API** uma 
 
 ## Emitindo um Stream no servidor
 Para exemplificar a implementação do recurso de emissão de **Streams**, vamos montar um pequeno servidor em `NodeJS`, no exemplo abaixo estou usando a porta 3000 para acesso http.
-```
+```javascript
 var http = require('http');
 http.createServer(function(req, res) {
   // Headers do Servidor HTTP que serão entregues
@@ -30,7 +30,7 @@ http.createServer(function(req, res) {
 
 ### Criando um endpoint para os streams
 Agora que já temos um servidor de base para implementar nosso **Stream**, é importante que tenhamos um `endpoint` ou rota exclusiva para o acesso dos **Streams**. Dessa forma podemos diferencia-lo do que é seria conteúdo "normal" do servidor. Para criar o `endpoint` é importante que os headers passados pelo cliente contenham o parametro `accept` com o mime-type: `text/event-stream`; e que a url requisitada seja nosso endpoint em `/streams`. Caso contrário o conteúdo "normal" do servidor será exibido.
-```
+```javascript
 var http = require('http');
 http.createServer(function(req, res) {
   if (req.headers.accept && req.headers.accept == 'text/event-stream') {
@@ -52,7 +52,7 @@ http.createServer(function(req, res) {
 
 ### A Emissão
 Agora que temos o servidor e o endpoint configurado para o acesso. Vamos emitir dados ramdomicos de forma ciclíca (a cada 5 segundos) para popular nosso stream.
-```
+```javascript
 var http = require('http');
 http.createServer(function(req, res) {
   if (req.headers.accept && req.headers.accept == 'text/event-stream') {
@@ -100,14 +100,14 @@ Pronto, nosso primeiro servidor com emissão de streams está concluído, no exe
 
 ## Recebendo os Streams no navegador
 Receber os streams no navegador é uma tarefa fácil graças ao `EventSource()`. Para configurar uma conexão entre o navegador e nosso servidor vocẽ basicamente precisa de uma linha (pode testar no console do `Google Chrome`):
-```
+```javascript
 var source = new EventSource('/streams');
 ```
 Vualá, estamos conectados!
 
 ### Exibindo uma mensagem ao se conectar no servidor
 Para nosso exemplo ficar bonitinho podemos adcionar um `eventListener` para exibir uma mensagem assim que nos conectarmos ao nosso servidor de streams. Let's Try:
-```
+```javascript
 source.onopen = function(e) {
   document.body.innerHTML += 'Conectado... Iniciando o Relógio!' + '<br>';
 };
@@ -115,7 +115,7 @@ source.onopen = function(e) {
 
 ### Exibindo os dados do Stream
 Agora que já temos uma mensagem bonitinha para saber que estamos conectados, podemos exibir as mensagens enviadas pelo Stream usando outro eventListener.
-```
+```javascript
 source.onmessage = function(e) {
   document.body.innerHTML += e.data + '<br>';
 };

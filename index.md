@@ -8,7 +8,7 @@ layout: main
         <article class="box-item" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
             <span class="category">
                 {% for category in post.category %}
-                <a href="{{ site.url }}{{ site.baseurl }}/categoria/{{ category }}">
+                <a href="#">
                   <span>{{ category }}</span>
                 </a>
                 {% endfor %}

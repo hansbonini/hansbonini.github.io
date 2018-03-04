@@ -7,10 +7,11 @@ layout: main
     {% for post in site.posts %}
         <article class="box-item" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
             <span class="category">
+                {% for category in post.category %}
                 <a href="{{ site.url }}{{ site.baseurl }}/categoria/{{ post.category }}">
-                    {% for category in post.category %}
-                    <span>{{ category }}</span>
+                  <span>{{ category }}</span>
                 </a>
+                {% endfor %}
             </span>
             <div class="box-body">
                 {% if post.image %}

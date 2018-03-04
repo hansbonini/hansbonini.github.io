@@ -8,7 +8,8 @@ layout: main
         <article class="box-item" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
             <span class="category">
                 <a href="{{ site.url }}{{ site.baseurl }}/categoria/{{ post.category }}">
-                    <span>{{ post.category }}</span>
+                    {% for category in post.category %}
+                    <span>{{ category }}</span>
                 </a>
             </span>
             <div class="box-body">

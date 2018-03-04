@@ -3,7 +3,7 @@ layout: post
 title: "Otimizando o desempenho do Arch Linux"
 description: Procedimentos que podem ser empregados na melhoria e otimização do desempenho do Arch Linux.
 image: 'http://i.imgur.com/TNXuv.png'
-category: 'arch'
+category: ['arch']
 twitter_text: Otimizando o desempenho do Arch Linux.
 introduction: 'Minha instalação do Arch está lenta, e agora? Bem vamos falar de recursos que podem ser empregados para melhorar o desempenho do seu sistema. Lembrando que uma boa configuração é fruto de tentativas e benchmarks exaustivos que você deve aplicar na sua instalação. Este artigo vai servir como uma luz no fim do túnel pra você'
 ---

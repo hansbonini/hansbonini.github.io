@@ -2,7 +2,7 @@
 layout: post
 title: "Dados em Realtime com Event Source e Streams"
 description: Obtendo dados realtime com Event Source e Streams.
-image: 'https://imgur.com/a/hfTSK'
+image: 'https://imgur.com/Arx6MNe'
 category: ['nodejs', 'servidores', 'arquitetura', 'realtime']
 twitter_text: "Dados em Realtime com Event Source e Streams."
 introduction: 'Quando existe a necessidade de obter dados em realtime, talvez executar várias requisições em intervalos curtos seja uma má idéia por questões de sobrecarga de memória e processamento, essas não só da parte do cliente mas também do servidor. Para evitar transtornos podemos optar por sistemas de notificações de dados, entre eles o PubSub via Websockets ou EventSource/Stream. Neste artigo vou falar sobre o EventSource Stream. '

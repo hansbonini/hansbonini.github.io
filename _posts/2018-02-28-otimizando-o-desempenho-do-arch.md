@@ -15,9 +15,9 @@ Minha instalação do Arch está lenta, e agora? Bem vamos falar de recursos que
 Pode soar desconhecido para alguns, muito complicado para outros, e bobo para os **heavy-users**. Porém ativar o uso da ZRAM seja ela independente ou ativa na partição **SWAP** gera um desempenho surpreendente se comparado a um sistema sem o uso da mesma. Bom, vamos ao passos de configuração!
 ### Carregando o módulo no Kernel
 A forma mais fácil de você ativa-la é primeiro carregar o módulo no kernel atráves do comando `sudo modprobe zram` porém na impede que você ative criando um arquivo em `/etc/modules-load.d/zram.conf` com o conteúdo:
-´´´
+```
 zram
-´´´
+```
 
 ### Configurando o Numero de ZRAM's necessários
 Aqui você vai ter que confiar em mim e aceitar que o número importante para nós de ZRAM é 2. Porém se não quer confiar então vá pesquisar mais afundo na wiki do Arch ;3. Pois bem insira dentro do arquivo `/etc/modprobe.d/zram.conf` a seguinte configuração:

@@ -3,6 +3,8 @@ email:                  "hans@ysolutions.com.br"
 baseurl:                ""
 url:                    "https://hansbonini.com.br"
 exclude:                ['package.json', 'src', 'node_modules']
+plugins:
+    jekyll-assets
 collections:
     posts:
         output:         true
@@ -10,3 +12,14 @@ collections:
     categories:
         output:         true
         permalink:       "/api/category/:title"
+assets:
+  compress:
+    css: false | true | default - development: false, production: true
+    js: false | true | default - development: false, production: true
+  skip_baseurl_with_cdn: false
+  skip_prefix_with_cdn: false
+  prefix: "/assets"
+  assets:
+    - "*.js"
+    - "*.css"
+    - "*.woff"

@@ -1,0 +1,14 @@
+.status-item:after {
+  position: absolute;
+  top: 0;
+  right: -15px;
+  width: 25px;
+  height: 100%;
+  display: block;
+  transform-origin: bottom left;
+  transform: skewx(25deg);
+  content: " ";
+  z-index: 1;
+  background: inherit;
+  box-shadow: 2px 0 2px 0 rgba(0,0,0,0.5);
+}

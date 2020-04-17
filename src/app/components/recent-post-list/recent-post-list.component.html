@@ -1,0 +1,16 @@
+<div class="row align-items-center">
+  <div class="col-md-3 col-xs-12 p-2" [routerLink]="[ '/post', post.url ]" *ngFor="let post of posts; let index=index;"
+    [@flip]="{ value: flip, params: { delay: index*0.3 } }">
+    <div class="window-title bg-primary vt323 pl-2">
+      POST #{{index}} = {{ post.date }}
+      <span class="bg-primary-dark text-white text-center">x</span>
+    </div>
+    <div class="d-inline-block bg-dark border-dashed border-primary">
+      <h2 class="text-center text-white vt323">{{ post.title }}</h2>
+      <p class="text-center text-primary"></p>
+      <p class="text-center">
+        <span class="badge badge-secondary mx-1 text-dark vt323" *ngFor="let category of post.categories">{{ category }}</span>
+      </p>
+    </div>
+  </div>
+</div>

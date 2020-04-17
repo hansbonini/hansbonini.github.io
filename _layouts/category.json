@@ -1,0 +1,22 @@
+---
+layout: default
+---
+{
+   "title": "{{ page.title }}",
+   "posts": [
+        {% assign sorted-posts = site.posts | where: "categories",page.title %}
+        {% for post in sorted-posts %}
+            {
+            "title"       : {{ post.title | escape | jsonify }},
+            "tags"        : {{ post.tags | array_to_sentence_string | jsonify }},
+            "categories"  : [
+            {% for category in post.category %}
+                {{ category | escape | jsonify }}{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+            ],
+            "url"         : {% capture url %}{{ site.baseurl }}{{ post.url }}{% endcapture %}{{ url | escape | jsonify }},
+            "date"        : {% capture post_date %}{{ post.date | date: '%m/%d/%Y'}}{% endcapture %}{{ post_date | escape | jsonify }}
+            }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+    ]
+}

@@ -1,0 +1,17 @@
+<app-navigation-bar user="visitante" site="hansbonini.com.br" (menu)="toggleMenu($event)"></app-navigation-bar>
+<div class="container-fluid full-contain">
+  <div class="row align-items-center h-100 pt-5 pb-2">
+    <!-- Aside Menu -->
+    <aside class="col-12 mt-2 p-0"  [@openClosed]="MENU_STATE ? 'open' : 'closed'">
+      <app-menu (toggle)="toggleMenu($event)"></app-menu>
+    </aside>
+    <!-- Content -->
+    <div class="col-12 pt-2 pb-2 h-100">
+      <div class="background-canvas">
+        <app-background-canvas></app-background-canvas>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<app-status-bar></app-status-bar>

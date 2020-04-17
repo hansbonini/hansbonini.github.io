@@ -1,0 +1,34 @@
+<nav class="navbar fixed-top navbar-dark bg-dark">
+	<!-- Navigation Bar -->
+	<div class="container-fluid">
+		<div class="row w-100 no-gutters">
+      <!-- Menu and Brand -->
+			<div class="col-md-4 col-xs-12">
+				<div class="row no-gutters justify-content-start">
+					<!-- Menu Button -->
+					<div class="col-2">
+						<button (click)="getMenuClick()" class="navbar-toggler" type="button" aria-controls="menu" aria-expanded="false" aria-label="Menu">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+					</div>
+					<!-- Brand -->
+					<div class="col">
+						<a class="navbar-brand text-primary vt323" routerLink="/" [innerHTML]="brand"></a>
+            <span class="text-muted vt323" [ngClass]="{ 'd-none': TERMINAL_CURSOR_STATE }">_</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="col d-none d-md-block">
+				<!-- Empty Bar -->
+			</div>
+
+			<!-- Search Button -->
+			<div class="col-md-1 d-none d-md-block text-right order-last">
+				<button class="search-button" type="button" aria-controls="search" aria-expanded="false" aria-label="Search">
+          <span class="search-icon text-primary"></span>
+        </button>
+			</div>
+		</div>
+	</div>
+</nav>

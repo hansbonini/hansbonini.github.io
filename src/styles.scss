@@ -1,0 +1,150 @@
+$body-bg:       #212121;
+$primary:       #2196f3 !default;
+$primarydark:   #0d47a1 !default;
+$secondary:     #aeea00 !default;
+$info:          #f92672 !default;
+$dark:          #181818 !default;
+$fa-font-path:  '~@fortawesome/fontawesome-free/webfonts';
+@import         '~bootstrap/scss/bootstrap';
+@import         "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import         "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import         "~@fortawesome/fontawesome-free/scss/brands.scss";
+
+h1 { color: $primary }
+h2 { color: $secondary }
+h3 { color: $info }
+p { color: $light }
+
+pre{
+  font-family:monospace,monospace;
+  font-size:1em
+}
+pre {
+    background:#222;
+    width:100%;
+    padding:1.25rem 0;
+    color:#a6e22e;
+    margin:1.875rem 0;
+    font-size:.875rem;
+}
+@media only screen and (min-width:37.5rem){
+    pre {
+        font-size:1rem;
+        padding:2.5rem 0;
+        margin:3.125rem 0
+    }
+}
+pre code{
+    width:auto;
+    max-width:50rem;
+    float:none;
+    display:block;
+    margin-right:auto;
+    margin-left:auto;
+    padding-left:0;
+    padding-right:0;
+    padding:0 1.25rem;
+}
+pre code::after{
+    content:'';
+    display:table;
+    clear:both
+}
+@media only screen and (max-width:37.5rem) {
+    pre code {
+         overflow-x:scroll 
+    }
+}
+ pre span{
+    line-height:1.5rem;
+    font-family:'Monaco','Consolas','Menlo',monospace
+}
+.highlight {
+    margin:1.25rem 0;
+}
+@media only screen and (min-width:37.5rem) {
+    .highlight{
+        word-wrap:break-word
+    }
+}
+.highlight .hll {
+    background-color:#333
+}
+.highlight .c,.highlight .cm,.highlight .cp,.highlight .c1,.highlight .cs {
+    color:#75715e
+}
+.highlight .err {
+    color:#960050;
+    background-color:#1e0010
+}
+.highlight .k,.highlight .kc,.highlight .kd,.highlight .kp,.highlight .kr,.highlight .kt,.highlight .no {
+    color:#66d9ef
+}
+.highlight .l,.highlight .mf,.highlight .mh,.highlight .mi,.highlight .mo,.highlight .se,.highlight .il {
+    color:#ae81ff
+}
+.highlight .o,.highlight .p {
+    color:#f7f7f2
+}
+.highlight .m,.highlight .n,.highlight .nb,.highlight .ni,.highlight .nl,.highlight .nn,.highlight .py,.highlight .nv,.highlight .w,.highlight .bp,.highlight .vc,.highlight .vg,.highlight .vi {
+    color:#a4d043
+}
+.highlight .kn,.highlight .nt,.highlight .ow {
+    color:#f92672
+}
+.highlight .ge{
+    font-style:italic
+}
+.highlight .gs{
+    font-weight:bold
+}
+.highlight .ld,.highlight .s,.highlight .sb,.highlight .sc,.highlight .sd,.highlight .s2,.highlight .sh,.highlight .si,.highlight .sx,.highlight .sr,.highlight .s1,.highlight .ss {
+    color:#e6db74
+}
+.highlight .na,.highlight .nc,.highlight .nd,.highlight .ne,.highlight .nf,.highlight .nx {
+    color:#a6e22e
+}
+
+.bg-primary-dark {
+  background-color: $primarydark;
+}
+
+.vt323 {
+  font-family: 'VT323', monospace;
+}
+
+.search-icon {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-user);
+  }
+}
+
+.angular-icon {
+  @extend %fa-icon;
+  @extend .fab;
+
+  &:before {
+    content: fa-content($fa-var-angular);
+  }
+}
+
+.sass-icon {
+  @extend %fa-icon;
+  @extend .fab;
+
+  &:before {
+    content: fa-content($fa-var-sass);
+  }
+}
+
+.gitpages-icon {
+  @extend %fa-icon;
+  @extend .fab;
+
+  &:before {
+    content: fa-content($fa-var-github-alt);
+  }
+}

@@ -6,11 +6,18 @@
       <app-menu (toggle)="toggleMenu($event)"></app-menu>
     </aside>
     <!-- Content -->
-    <div class="col-12 pt-2 pb-2 h-100">
+    <div class="col-12 pt-2 pb-2 h-100 overflow-auto" (wheel)="mouseScroll($event)" [scrollTop]="scrollOffset">
       <div class="background-canvas">
         <app-background-canvas></app-background-canvas>
       </div>
-      <router-outlet></router-outlet>
+      <div #page class="container pt-4 pb-5">
+        <router-outlet (activate)="onActivate($event)"></router-outlet>
+      </div>
+      <div class="scrollbar bg-dark border-primary" [@scrollDisplay]="SCROLL_STATE ? 'show':'hide'">
+        <div class="scroller"><div class="scroller-bar rounded bg-primary" [style.height.px]="scrollerHeight" [style.top.px]="scrollerOffset"></div></div>
+        <div class="top" (click)="scrollUp()"><i class="fas fa-caret-square-up text-primary"></i></div>
+        <div class="down" (click)="scrollDown()"><i class="fas fa-caret-square-down text-primary"></i></div>
+      </div>
     </div>
   </div>
 </div>

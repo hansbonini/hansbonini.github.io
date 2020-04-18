@@ -118,9 +118,48 @@ pre code::after{
   @extend .fas;
 
   &:before {
-    content: fa-content($fa-var-user);
+    content: fa-content($fa-var-search);
   }
 }
+
+.facebook-icon {
+  @extend %fa-icon;
+  @extend .fab;
+
+  &:before {
+    content: fa-content($fa-var-facebook);
+  }
+}
+
+.instagram-icon {
+  @extend %fa-icon;
+  @extend .fab;
+
+  &:before {
+    content: fa-content($fa-var-instagram);
+  }
+}
+
+
+.linkedin-icon {
+  @extend %fa-icon;
+  @extend .fab;
+
+  &:before {
+    content: fa-content($fa-var-linkedin);
+  }
+}
+
+.github-icon {
+  @extend %fa-icon;
+  @extend .fab;
+
+  &:before {
+    content: fa-content($fa-var-github);
+  }
+}
+
+
 
 .angular-icon {
   @extend %fa-icon;
@@ -146,5 +185,14 @@ pre code::after{
 
   &:before {
     content: fa-content($fa-var-github-alt);
+  }
+}
+
+.cloudflare-icon {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-cloud);
   }
 }

@@ -9,7 +9,7 @@
       <h2 class="text-center text-white vt323">{{ post.title }}</h2>
       <p class="text-center text-primary"></p>
       <p class="text-center">
-        <span class="badge badge-secondary mx-1 text-dark vt323" *ngFor="let category of post.categories">{{ category }}</span>
+        <span class="badge badge-secondary mx-1 text-dark vt323" [routerLink]="[ '/categories', category ]"  *ngFor="let category of post.categories">{{ category }}</span>
       </p>
     </div>
   </div>

@@ -30,6 +30,7 @@ export class AppComponent {
 
   MENU_STATE = false;
   SCROLL_STATE = false;
+  MOBILE_STATE = false;
 
   private screenHeight: number = 0;
   private screenWidth: number = 0;
@@ -44,31 +45,38 @@ export class AppComponent {
   @HostListener("window:resize", ["$event"]) responsiveCanvas(event?) {
     this.screenHeight = window.innerHeight;
     this.screenWidth = window.innerWidth;
+    this.MOBILE_STATE = false;
+    if (this.screenWidth > 768) {
+        this.MOBILE_STATE = true;
+    }
   }
   
   ngOnInit() {
     this.screenHeight = window.innerHeight;
     this.screenWidth = window.innerWidth;
+    this.MOBILE_STATE = false;
+    if (this.screenWidth > 768) {
+        this.MOBILE_STATE = true;
+    }
   }
   
   onActivate(event) {
-    this.SCROLL_STATE = false;
-    this.scrollOffset = 0;
-    this.scrollerOffset = 10;
-    this.scrollerHeight = 0;
-    this.scrollerAmount = 0;
-    setTimeout(t => {
-        console.log(this.page.nativeElement.offsetHeight,this.screenHeight)
-        if (this.page.nativeElement.offsetHeight > this.screenHeight) {
-            this.SCROLL_STATE = true;
-            this.scrollerAmount = (this.page.nativeElement.offsetHeight*0.05);
-            this.scrollerHeight = ((this.screenHeight-100)*0.05)
-            console.log(this.scrollerHeight);
-            return;
-        }
+    if (this.screenWidth > 768) {
         this.SCROLL_STATE = false;
-    }, 1000);
-    
+        this.scrollOffset = 0;
+        this.scrollerOffset = 10;
+        this.scrollerHeight = 0;
+        this.scrollerAmount = 0;
+        setTimeout(t => {
+            if (this.page.nativeElement.offsetHeight > this.screenHeight) {
+                this.SCROLL_STATE = true;
+                this.scrollerAmount = (this.page.nativeElement.offsetHeight*0.05);
+                this.scrollerHeight = ((this.screenHeight-100)*0.05)
+                return;
+            }
+            this.SCROLL_STATE = false;
+        }, 1000);
+    }
   }
  
   scrollUp() {
@@ -102,6 +110,5 @@ export class AppComponent {
   
   toggleMenu(clicked: boolean) {
     this.MENU_STATE = this.MENU_STATE ? false : true;
-    console.log(this.MENU_STATE);
   }
 }

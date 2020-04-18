@@ -3,7 +3,7 @@ email:                  "hans@ysolutions.com.br"
 baseurl:                ""
 url:                    "https://hansbonini.com.br"
 exclude:                ['package.json', 'src', 'node_modules']
-include:                ['.htaccess']
+include:                ['.htaccess', 'manifest.json', 'feed.json', 'feed.xml']
 plugins:
     - jekyll-assets
 collections:

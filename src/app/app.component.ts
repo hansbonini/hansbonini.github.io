@@ -46,7 +46,7 @@ export class AppComponent {
     this.screenHeight = window.innerHeight;
     this.screenWidth = window.innerWidth;
     this.MOBILE_STATE = false;
-    if (this.screenWidth > 768) {
+    if (this.screenWidth > 992) {
         this.MOBILE_STATE = true;
     }
   }
@@ -55,13 +55,13 @@ export class AppComponent {
     this.screenHeight = window.innerHeight;
     this.screenWidth = window.innerWidth;
     this.MOBILE_STATE = false;
-    if (this.screenWidth > 768) {
+    if (this.screenWidth > 992) {
         this.MOBILE_STATE = true;
     }
   }
   
   onActivate(event) {
-    if (this.screenWidth > 768) {
+    if (this.screenWidth > 992) {
         this.SCROLL_STATE = false;
         this.scrollOffset = 0;
         this.scrollerOffset = 10;
